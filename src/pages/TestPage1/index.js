@@ -33,6 +33,19 @@ const TestPage1 = () => {
           Go to Test Page 2
         </Link>
         <Link 
+          to="/test-page-3" 
+          style={{ 
+            padding: '10px 20px', 
+            backgroundColor: '#fd7e14', 
+            color: 'white', 
+            textDecoration: 'none', 
+            borderRadius: '5px',
+            margin: '0 10px'
+          }}
+        >
+          Go to Test Page 3
+        </Link>
+        <Link 
           to="/" 
           style={{ 
             padding: '10px 20px', 

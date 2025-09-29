@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import TestPage1 from './TestPage1';
 import TestPage2 from './TestPage2';
+import TestPage3 from './TestPage3';
 
 // Home component for the root route
 const Home = () => {
@@ -40,6 +41,20 @@ const Home = () => {
             }}
           >
             Test Page 2
+          </Link>
+          <Link 
+            to="/test-page-3" 
+            style={{ 
+              padding: '15px 25px', 
+              backgroundColor: '#fd7e14', 
+              color: 'white', 
+              textDecoration: 'none', 
+              borderRadius: '8px',
+              fontSize: '16px',
+              fontWeight: 'bold'
+            }}
+          >
+            Test Page 3
           </Link>
         </div>
       </div>
@@ -105,6 +120,18 @@ const AppRouter = () => {
             >
               Page 2
             </Link>
+            <Link 
+              to="/test-page-3" 
+              style={{ 
+                color: 'white', 
+                textDecoration: 'none', 
+                padding: '8px 16px',
+                borderRadius: '4px',
+                backgroundColor: 'rgba(255,255,255,0.1)'
+              }}
+            >
+              Page 3
+            </Link>
           </div>
         </nav>
 
@@ -113,6 +140,7 @@ const AppRouter = () => {
           <Route path="/" element={<Home />} />
           <Route path="/test-page-1" element={<TestPage1 />} />
           <Route path="/test-page-2" element={<TestPage2 />} />
+          <Route path="/test-page-3" element={<TestPage3 />} />
           {/* Catch-all route for 404 */}
           <Route path="*" element={
             <div style={{ padding: '20px', textAlign: 'center' }}>
